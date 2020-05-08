@@ -60,8 +60,9 @@ int main() {
 
 	char coordinates[50][120] = {};
 
-	// if value y fits in the size of the cell, insert "#" to array coordinates
-	// it also fills all empty cells which are between 
+	// If value y fits in the size of the cell, insert "#" to array "coordinates"
+	// It also fills all empty cells which are between current point 
+	// and horizontal axis with same x-coordinate
 	for (int row = 0; row < n; row++) {
 		for (int col = 0; col < m; col++) {
 
