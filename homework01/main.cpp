@@ -9,7 +9,7 @@ using namespace std;
 // calculate f(x)
 // f(x) could be changed flexibility
 float exec(float x) {
-	return x * x;
+	return -x * log(x);
 };
 
 
@@ -41,15 +41,26 @@ int main() {
 	float height = (max_y - min_y) / n;
 
 	int horizontal_axis = n;
+	int extra_rows = 0;
+	int first_row = 0;
+	int last_row = n - 1;
 
 	// find position of horizontal axis
 	if (min_y < 0 && max_y > 0) {
 		horizontal_axis = int(max_y / height);
 	};
 
-	if (max_y <= 0) {
+	if (max_y < 0) {
 		horizontal_axis = -1;
+		height = abs(min_y) / n;
+		extra_rows = abs(max_y) / height;
 	};
+	
+	if (min_y > 0) {
+		height = max_y / n;
+		extra_rows = min_y / height;
+		last_row = n - extra_rows;
+	}
 
 	// pos_y is positions of all y coordinates according x sorted in decreasing order
 	vector<float> pos_y = { max_y };
@@ -96,29 +107,27 @@ int main() {
 		};
 	};
 
+
 	// plot graph into text file
 	ofstream my_file("graph.txt");
 	if (my_file.is_open())
 	{
-		int first_row = 0;
-
 		if (horizontal_axis == -1) {
 			for (int i = 0; i < m; i++) {
 				my_file << '-';
 			}
 			my_file << endl;
 
-			first_row = abs(int(max_y / height));
-			for (int i = 0; i < first_row; i++) {
+			for (int i = 0; i < extra_rows - 1; i++) {
 				for (int j = 0; j < m; j++) {
-					my_file  << '#';
+					my_file << '#';
 				};
 				my_file << endl;
 			};
 		};
 
-		for (int row = 0; row < n - first_row; row++) {
-			for (int col = 0; col < m ; col++) {
+		for (int row = first_row; row <= last_row; row++) {
+			for (int col = 0; col < m; col++) {
 				my_file << coordinates[row][col];
 			};
 			if (row == horizontal_axis) {
@@ -131,6 +140,12 @@ int main() {
 		};
 
 		if (horizontal_axis == n) {
+			for (int i = 0; i < extra_rows; i++) {
+				for (int j = 0; j < m; j++) {
+					my_file << '#';
+				}
+				my_file << endl;
+			}
 			for (int i = 0; i < m; i++) {
 				my_file << '-';
 			}
