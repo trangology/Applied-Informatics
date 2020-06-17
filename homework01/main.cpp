@@ -9,7 +9,7 @@ using namespace std;
 // calculate f(x)
 // f(x) could be changed flexibility
 float exec(float x) {
-	return -x * log(x);
+	return sqrt(x);
 };
 
 
@@ -140,7 +140,7 @@ int main() {
 		};
 
 		if (horizontal_axis == n) {
-			for (int i = 0; i < extra_rows; i++) {
+			for (int i = 0; i < extra_rows - 1; i++) {
 				for (int j = 0; j < m; j++) {
 					my_file << '#';
 				}
