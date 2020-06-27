@@ -10,14 +10,16 @@ int_list_t::node_t* int_list_t::get_node(const size_t pos)
     if (pos <= (size - pos))
     {
         node_t* cur_node = head;
-        for (size_t i = 0; i < pos; i++) {
+        for (size_t i = 0; i < pos; i++) 
+        {
             cur_node = cur_node->next;
         }
         return cur_node;
     }
 
     node_t* cur_node = tail;
-    for (size_t i = size - 1; i >= pos; i--) {
+    for (size_t i = size - 1; i >= pos; i--) 
+    {
         cur_node = cur_node->prev;
     }
     return cur_node;
@@ -42,7 +44,8 @@ int_list_t::int_list_t(const int_list_t& other) : int_list_t()
 
 int_list_t::int_list_t(size_t count, int value) : int_list_t()
 {
-    for (size_t i = 0; i < count; i++) {
+    for (size_t i = 0; i < count; i++) 
+    {
         push_back(value);
     }
 };
@@ -209,7 +212,7 @@ void int_list_t::erase(size_t pos)
         pop_back();
     }
 
-    // cur_node is the node will be deleted
+    // tmp is the node will be deleted
     node_t* tmp = get_node(pos);
 
     tmp->prev->next = tmp->next;
@@ -320,10 +323,11 @@ std::istream& operator>>(std::istream& input, int_list_t& list)
 {
     int tmp = 0;
 
-    while (input >> tmp) {
+    while (input >> tmp) 
+    {
         list.push_back(tmp);
     }
-
+    
     return input;
 }
 
