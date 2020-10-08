@@ -1,0 +1,9 @@
+D:/ITMO/2nd-year/Applied-Informatics/homework04/cmake-build-debug/CMakeFiles/homework04.dir
+D:/ITMO/2nd-year/Applied-Informatics/homework04/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/ITMO/2nd-year/Applied-Informatics/homework04/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+D:/ITMO/2nd-year/Applied-Informatics/homework04/cmake-build-debug/strategies/CMakeFiles/edit_cache.dir
+D:/ITMO/2nd-year/Applied-Informatics/homework04/cmake-build-debug/strategies/CMakeFiles/strategies.dir
+D:/ITMO/2nd-year/Applied-Informatics/homework04/cmake-build-debug/strategies/CMakeFiles/rebuild_cache.dir
+D:/ITMO/2nd-year/Applied-Informatics/homework04/cmake-build-debug/game/CMakeFiles/game.dir
+D:/ITMO/2nd-year/Applied-Informatics/homework04/cmake-build-debug/game/CMakeFiles/edit_cache.dir
+D:/ITMO/2nd-year/Applied-Informatics/homework04/cmake-build-debug/game/CMakeFiles/rebuild_cache.dir
