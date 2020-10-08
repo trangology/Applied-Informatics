@@ -1,2 +1,0 @@
-C:\MinGW\bin\ar.exe qc libstrategies.a  CMakeFiles/strategies.dir/human.cpp.obj CMakeFiles/strategies.dir/computer_1.cpp.obj CMakeFiles/strategies.dir/computer_2.cpp.obj CMakeFiles/strategies.dir/computer_interface.cpp.obj
-C:\MinGW\bin\ranlib.exe libstrategies.a
