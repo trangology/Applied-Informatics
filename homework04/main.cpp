@@ -7,7 +7,6 @@
 
 
 int main() {
-//    https://www.youtube.com/watch?v=qUDAkDvoLas
 //    auto player1 = std::make_shared<first_computer_strategy_t>("First player");
 //    auto player2 = std::make_shared<second_computer_strategy_t>("Second player");
 //
@@ -28,5 +27,3 @@ int main() {
 
   return 0;
 }
-
-
