@@ -3,15 +3,15 @@
 #include <iostream>
 
 void human_strategy_t::on_win() {
-  std::cout << "You win!" << std::endl;
+    std::cout << "You win!" << std::endl;
 }
 
 void human_strategy_t::on_lose() {
-  std::cout << "You lose!" << std::endl;
+    std::cout << "You lose!" << std::endl;
 }
 
 void human_strategy_t::on_draw() {
-  std::cout << "Draw!" << std::endl;
+    std::cout << "Draw!" << std::endl;
 }
 
 move_list_t human_strategy_t::get_moves(board_t& board) {

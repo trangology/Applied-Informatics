@@ -5,7 +5,7 @@
 class computer_interface_t : public strategy_interface_t {
 public:
   computer_interface_t();
-    virtual move_list_t apply_strategy(board_t& board, const jumps_list_t & moves) = 0;
+  virtual move_list_t apply_strategy(board_t& board, const jumps_list_t & moves) = 0;
 
   void on_win() override;
   void on_lose() override;
@@ -16,5 +16,5 @@ public:
 private:
   size_t win_counter;
   size_t lose_counter;
-  size_t tie_counter;
+  size_t draw_counter;
 };
